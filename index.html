@@ -1,0 +1,343 @@
+<!-- https://api.unlayer.com/v2/stock/templates/gadgets-order-confirmation/html# -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #022f50;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 100px;
+      }
+
+      /******** header styles *******/
+      .header {
+        background-color: #001a35;
+      }
+
+      .header h1 {
+        color: #f1c40f;
+        font-weight: bold;
+        font-size: 28px;
+        padding: 40px 10px 10px 0;
+      }
+      .header p {
+        color: #ffffff;
+        font-size: 14px;
+        padding: 0px 10px 35px 10px;
+      }
+
+      .banner img {
+        width: 100%;
+        max-width: 600px;
+        /* padding: 10px; */
+      }
+
+      /* track your order */
+      button{
+        width: 100%;
+        padding: 10px 0;
+        background-color: #001a35;
+        border: none;
+        color: grey;
+        font-size: 30px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      button:hover{
+        background-color: #001a3567;
+      }
+
+      /* details section below banner */
+      .details {
+        color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 20px;
+      }
+
+      .details .heading {
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .details p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .details .yellow {
+        color: #f1c40f;
+      }
+
+      /****** item details *******/
+      .product {
+        margin-top: 30px;
+      }
+      .p-head {
+        position: relative;
+      }
+      .p-head img {
+        width: 100%;
+        max-width: 600px;
+      }
+      .p-head h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #f1c40f;
+      }
+
+      /******** card details ********* */
+
+      .product-table {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        color: white;
+      }
+
+      .product-table tr {
+        border-bottom: 1px solid #f1c40f68;
+      }
+
+      .product-table td {
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      .product-table .img img {
+        width: 100%;
+        max-width: 150px;
+        object-fit: contain;
+        border-radius: 5px;
+      }
+
+      .product-table .description h3,
+      .product-table .price h3 {
+        margin: 0;
+      }
+
+      .product-table .calculation td,
+      .product-table .total td {
+        text-align: right;
+      }
+
+      .product-table .total td h3 {
+        margin: 0;
+      }
+
+      /* guaranty section */
+      .guaranty{
+          color: #f1c40f;
+          background-color: #052241;
+          margin-top: 30px;
+          padding: 30px 0;
+          width: 100%;
+          max-width: 600px;
+      }
+
+      /* help section  */
+      .help{
+        line-height: 30px;
+        max-width: 600px;
+      }
+
+      .help h3{
+        margin: 50px 0px 20px 0px;
+      }
+
+      /* footer */
+      footer {
+        /* height: 200px; */
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #052241;
+        margin: 50px 0px 20px 0px;
+        padding: 30px 0;
+      }
+
+      footer span{
+        font-size: 14px;
+      }
+
+      .m-1{
+        margin-bottom: 10px;
+      }
+
+      footer p{
+        font-size: 13px;
+      }
+
+      footer .social img{
+        width: 30px; 
+        margin-right: 10px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .product-table {
+          font-size: 12px;
+        }
+
+        .product-table td {
+          padding: 5px;
+        }
+
+        .product-table .img img {
+          max-width: 73px;
+        }
+
+        .product-table .description {
+          font-size: 10px;
+        }
+
+        .product-table .price h3 {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header section -->
+      <div class="header">
+        <h1>Thank you for your order</h1>
+        <p>Your order is on way! check it out.</p>
+      </div>
+
+      <!-- banner -->
+      <div class="banner">
+        <img src="img/banner.png" alt="" />
+      </div>
+
+      <!-- track your order -->
+       <button>Track Your Order</button>
+
+      <!-- details section-->
+      <div class="details">
+        <div class="order-summary">
+          <p class="heading">ORDER SUMMARY:</p>
+          <p>ORDER ID: <span class="yellow"> ABC123</span></p>
+          <p>ORDER DATE: <span class="yellow">May 5, 20xx</span></p>
+          <p>ORDER TOTAL: <span class="yellow">$525.00</span></p>
+        </div>
+        <div class="shipping-detail">
+          <p class="heading">SHIP TO:</p>
+          <p><span class="yellow">HENRY FORD</span></p>
+          <p>Linkon st, Model Town,</p>
+          <p>San Francisco, CA , USA</p>
+        </div>
+      </div>
+
+      <!-- product detail section -->
+      <div class="product">
+        <div class="p-head">
+          <img src="img/item header.png" alt="" />
+          <h3>Items Overview</h3>
+        </div>
+      </div>
+
+      <!-- cards with details -->
+      <table class="product-table">
+        <tr class="product">
+          <td class="img">
+            <img src="img/1p1.jpg" alt="product1" />
+          </td>
+          <td class="description">
+            <h3>Woman's jacket</h3>
+            <p>COLOUR: BLUE</p>
+            <p>SIZE: XS</p>
+            <p>QTY: 1</p>
+          </td>
+          <td class="price">
+            <h3>$45.00</h3>
+          </td>
+        </tr>
+        <tr class="product">
+          <td class="img">
+            <img src="img/1p2.jpg" alt="product2" />
+          </td>
+          <td class="description">
+            <h3>Woman's jacket</h3>
+            <p>COLOUR: BLUE</p>
+            <p>SIZE: XS</p>
+            <p>QTY: 1</p>
+          </td>
+          <td class="price">
+            <h3>$45.00</h3>
+          </td>
+        </tr>
+        <tr class="calculation" style="border: none;">
+          <td colspan="2">Subtotal:</td>
+          <td>$90.00</td>
+        </tr>
+        <tr class="calculation" style="border: none;">
+          <td colspan="2">Tax:</td>
+          <td>$0.00</td>
+        </tr>
+        <tr class="calculation">
+          <td colspan="2">Shipping:</td>
+          <td>$0.00</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2"><h3>Total</h3></td>
+          <td><h3>$90.00</h3></td>
+        </tr>
+      </table>
+
+      <!-- garaunty  section-->
+      <div class="guaranty">
+        <h3>WE PROVIDE 30 DAYS <br>
+            MONEY BACK GUARANTEE!</h3>
+      </div>
+
+      <!-- help section -->
+      <div class="help">
+        <h3>NEED HELP?</h3>
+        <p>Call Us: 1234567890 </p>
+        <p> Email Us: abc@gmail.com</p>
+      </div>
+
+      <!-- footer section -->
+       <footer>
+        <div class="social">
+            <p class="m-1">Follow Us On</p>
+            <div class="icons ">
+                <img src="img/facebook.png" alt="">
+                <img src="img/instagram.png" alt="">
+                <img src="img/twitter.png" alt="">
+            </div>
+        </div>
+        <div class="address ">
+            <p class="m-1">Shop Address</p>
+            <p>Adam st, new eskaton,</p>
+
+               <p> San Francisco, CA. USA</p>
+        </div>
+       </footer>
+    </div>
+  </body>
+</html>
