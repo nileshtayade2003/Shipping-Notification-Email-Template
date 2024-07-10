@@ -56,9 +56,9 @@
         border: none;
         color: grey;
         font-size: 30px;
-        cursor: pointer;
         margin-top: 20px;
         transition-duration: 0.15s !important;
+        cursor: pointer;
       }
 
       button:hover {
@@ -91,17 +91,17 @@
         margin-top: 30px;
       }
       .p-head {
-        position: relative;
-      }
+        position: relative !important;
+      } 
       .p-head img {
         width: 100%;
         max-width: 600px;
       }
       .p-head h3 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
         text-align: center;
         color: #f1c40f;
       }
@@ -242,7 +242,7 @@
 
       <!-- banner -->
       <div class="banner">
-        <img src="https://i.postimg.cc/MHRpXv3R/banner.png" alt="" />
+        <img src="https://i.postimg.cc/MHRpXv3R/banner.png" alt="banner" />
       </div>
 
       <!-- track your order -->
@@ -272,10 +272,14 @@
       <!-- product detail section -->
       <div class="product">
         <div class="p-head">
-          <img src="https://i.postimg.cc/XJtvVwL4/item-header.png" alt="" />
-          <h3>Items Overview</h3>
+          <img src="https://i.postimg.cc/Y0C209Fq/image.png" alt="heading">
+
+          <!-- not working so above image added -->
+          <!-- <img src="https://i.postimg.cc/XJtvVwL4/item-header.png" alt="" />
+          <h3>Items Overview</h3> -->
         </div>
       </div>
+      
 
       <!-- cards with details -->
       <table class="product-table">
@@ -347,9 +351,9 @@
             <td class="social" style="padding: 20px;">
               <p class="m-1">Follow Us On</p>
               <div class="icons">
-                <a href="#"><img src="https://i.postimg.cc/3xZWg08F/facebook.png" alt="" /></a>
-                <a href="#"><img src="https://i.postimg.cc/9fF01Xz5/instagram.png" alt="" /></a>
-                <a href="#"><img src="https://i.postimg.cc/J7Bnp27n/twitter.png" alt="" /></a>
+                <a href="#" title="facebook"><img src="https://i.postimg.cc/3xZWg08F/facebook.png" alt="facebook" /></a>
+                <a href="#" title="instagram"><img src="https://i.postimg.cc/9fF01Xz5/instagram.png" alt="instagram" /></a>
+                <a href="#" title="twitter"><img src="https://i.postimg.cc/J7Bnp27n/twitter.png" alt="twitter" /></a>
               </div>
             </td>
             <td class="address" style="padding: 20px;">
